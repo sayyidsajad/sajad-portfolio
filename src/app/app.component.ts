@@ -1,11 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavbarComponent } from './src/navbar/navbar.component';
 
 @Component({
-    selector: 'app-root',
-    imports: [NavbarComponent],
-    templateUrl: './app.component.html'
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  imports: [CommonModule],
 })
 export class AppComponent {
   title = 'SAJAD';
+  isMenuOpen = false;
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
